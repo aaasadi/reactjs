@@ -4,9 +4,15 @@ import "../style/button.css";
 class Button extends Component {
   constructor(props) {
     super(props);
+
+    console.log("button component", this.props);
   }
   render() {
-    return <button className="btn">{this.props.text}</button>;
+    return (
+      <button className="btn">
+        {this.props.text} {this.props.link}
+      </button>
+    );
   }
 }
 
